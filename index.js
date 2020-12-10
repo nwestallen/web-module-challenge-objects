@@ -213,10 +213,19 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(mileage) {
+    let car = {
+      odometer: mileage,
+      drive: function (distance) {
+        this.odometer += distance;
+        return this.odometer;
+      }
+    }
+    return car;
 }
+
+let car1 = carMaker(10);
+console.log(car1.drive(100));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
